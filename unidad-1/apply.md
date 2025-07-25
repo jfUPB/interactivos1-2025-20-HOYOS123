@@ -25,49 +25,50 @@ let connectionInitialized = false;
 let x = 200; // Posición inicial del círculo
 
 function setup() {
-createCanvas(400, 400);
-background(220);
+  createCanvas(400, 400);
+  background(220);
 
-port = createSerial();
+  port = createSerial();
 
-connectBtn = createButton("Connect to micro:bit");
-connectBtn.position(80, 300);
-connectBtn.mousePressed(connectBtnClick);
+  connectBtn = createButton("Connect to micro:bit");
+  connectBtn.position(80, 300);
+  connectBtn.mousePressed(connectBtnClick);
 }
 
 function draw() {
-background(220); // Limpiar pantalla cada frame
+  background(220); // Limpiar pantalla cada frame
 
-if (port.opened() && !connectionInitialized) {
-port.clear();
-connectionInitialized = true;
-}
+  if (port.opened() && !connectionInitialized) {
+    port.clear();
+    connectionInitialized = true;
+  }
 
-if (port.availableBytes() > 0) {
-let dataRx = port.read(1); // Lee 1 byte
-if (dataRx) {
-let charRx = String.fromCharCode(dataRx[0]); // Convierte a carácter
+  if (port.availableBytes() > 0) {
+    let dataRx = port.read(1); // Lee 1 byte
+    if (dataRx) {
+      let charRx = String.fromCharCode(dataRx[0]); // Convierte a carácter
 
-if (charRx === 'L') {
-x -= 10; // Mover a la izquierda
-} else if (charRx === 'R') {
-x += 10; // Mover a la derecha
-}
-}
-}
+      if (charRx === "L") {
+        x -= 10; // Mover a la izquierda
+      } else if (charRx === "R") {
+        x += 10; // Mover a la derecha
+      }
+    }
+  }
 
-x = constrain(x, 0, width); // Mantener dentro del canvas
-ellipse(x, height / 2, 50, 50); // Dibujar el círculo
+  x = constrain(x, 0, width); // Mantener dentro del canvas
+  ellipse(x, height / 2, 50, 50); // Dibujar el círculo
 }
 
 function connectBtnClick() {
-if (!port.opened()) {
-port.open("MicroPython", 115200);
-connectionInitialized = false;
-} else {
-port.close();
+  if (!port.opened()) {
+    port.open("MicroPython", 115200);
+    connectionInitialized = false;
+  } else {
+    port.close();
+  }
 }
-}
+
 ```
 
 #### Código del Micro:Bit
