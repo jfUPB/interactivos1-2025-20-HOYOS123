@@ -13,6 +13,7 @@ Cuando se presionan los botones A o B en la micro:bit, se envía un comando por 
 ### Actividad 6
 
 #### Enlace al editor de p5.js:
+
 [Enlace](https://editor.p5js.org/HOYOS123/sketches/DjQUwwuP5)
 
 #### Código del programa:
@@ -71,7 +72,7 @@ port.close();
 
 #### Código del Micro:Bit
 
-```
+``` py
 from microbit import *
 
 uart.init(baudrate=115200)
