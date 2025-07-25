@@ -23,3 +23,43 @@
 ## ¿Cómo podrías aplicar lo que has visto en tu perfil profesional?
 
 **R//** Este permite usar la tecnología para crear proyectos más innovadores y únicos, combinando creatividad con automatización. Esto ayuda a desarrollar desde gráficos, productos, instalaciones artísticas o experiencias digitales que son dinámicas y que pueden cambiar o adaptarse solas. Además, demuestra saber trabajar con herramientas digitales avanzadas y pensar de forma creativa para resolver problemas o sorprender a las personas.
+
+# ACTIVIDAD 3
+
+## ¿Cuáles son los Inputs, Outputs y el proceso?
+
+**R//** Los Inputs son los botones A y B. El puerto USB de la torre donde se conecta el cable que le da señal al Micro:Bit, el acelerómetro. Los Outputs son el Display, los datos de la computadora...
+En el proceso debes conectar el micro:bit al computador, Cargarlo al programa p5.js, la librería de comunicación serial debes añadirla, después se copia el código, a continuación ejecutas el sketch, conectas el micro:bit desde el navegador y prueba los botones y sensores para ver cómo reacciona la animación cuando pulsas "Send Love".
+
+---
+
+# ACTIVIDAD 4
+
+## Mi propio programa en p5.js:
+
+#### Enlace del programa:
+[Enlace p5.js Editor](https://editor.p5js.org/HOYOS123/sketches/YGns7BqpX)
+
+#### Código del programa:
+```javascript
+function setup() {
+  createCanvas(600, 600);
+  noLoop(); // Solo dibuja una vez
+  background(0);
+  
+  for (let i = 0; i < 200; i++) {
+    let x = random(width);
+    let y = random(height);
+    let r = sin(x * 0.01) * 100 + 100;
+    let g = cos(y * 0.01) * 100 + 100;
+    let b = random(100, 255);
+    fill(r, g, b, 150);
+    noStroke();
+    ellipse(x, y, random(10, 40));
+  }
+}
+```
+
+#### Captura de pantalla del resultado:
+<img width="1919" height="988" alt="Captura de pantalla 2025-07-25 144725" src="https://github.com/user-attachments/assets/d35e4f8c-b25e-4caa-ae90-584193891be4" />
+
