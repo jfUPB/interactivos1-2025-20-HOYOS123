@@ -24,8 +24,6 @@
 
 **R//** Este permite usar la tecnología para crear proyectos más innovadores y únicos, combinando creatividad con automatización. Esto ayuda a desarrollar desde gráficos, productos, instalaciones artísticas o experiencias digitales que son dinámicas y que pueden cambiar o adaptarse solas. Además, demuestra saber trabajar con herramientas digitales avanzadas y pensar de forma creativa para resolver problemas o sorprender a las personas.
 
----
-
 # ACTIVIDAD 3
 
 ## ¿Cuáles son los Inputs, Outputs y el proceso?
@@ -64,3 +62,4 @@ function setup() {
 
 #### Captura de pantalla del resultado:
 <img width="1919" height="988" alt="Captura de pantalla 2025-07-25 144725" src="https://github.com/user-attachments/assets/d35e4f8c-b25e-4caa-ae90-584193891be4" />
+
