@@ -2,6 +2,7 @@
 
 ## 🤔 Fase: Reflect
 
+### Actividad 7
 # Parte 1: Recuperación de Conocimiento (Retrieval Practice)
 
 1. **Características de un sistema físico interactivo**  
@@ -63,3 +64,28 @@
    - ¿Te dio seguridad o preferirías haberlo intentado por tu cuenta desde el principio?
   
 **R//** Me dio seguridad porque me ayudó a entender cada parte del proceso sin perderme. Ya con eso claro, pude comenzar a experimentar con más confianza.
+
+
+### Actividad 8
+
+
+
+
+
+
+### Actividad 9
+## Continuar:
+**R//** El video del Mario Kart fue el que más me inspiró en esta unidad. Me ayudó a visualizar cómo los sistemas físicos interactivos pueden transformar una experiencia digital en algo mucho más inmersivo.
+Ver cómo los movimientos del cuerpo, sensores y objetos físicos se integraban con el juego me hizo entender el verdadero potencial de estos sistemas para crear nuevas formas de interacción. Me motivó a pensar en cómo podría usar sensores del micro:bit para controlar visualizaciones o experiencias interactivas propias, incluso más allá del aula, en proyectos creativos personales.
+
+## Dejar de hacer
+**R//** En algunos momentos la explicación técnica fue un poco rápida, especialmente al momento de conectar p5.js con micro:bit. Me costó un poco seguir la lógica del paso a paso sin ejemplos más guiados. Tal vez se podría incluir un repaso más visual o pausado de esa conexión, o ejemplos más simples al inicio para no perderse.
+
+## Empezar a hacer
+**R//** Me genera mucha curiosidad experimentar con los otros sensores del micro:bit, como el de luz o temperatura. Me gustaría crear visualizaciones más complejas en p5.js, como representaciones visuales que reaccionen al entorno en tiempo real, mezclando arte y datos. También me interesaría ver ejemplos de proyectos artísticos más ambiciosos hechos con estas herramientas.
+
+## Balance inspiración vs. técnica
+**R//** Me pareció que hubo un buen equilibrio entre la inspiración y la técnica. Los videos de la Actividad 01 me ayudaron a imaginar lo que se puede lograr, y luego las actividades técnicas me mostraron cómo empezar a hacerlo. Sin embargo, al principio puede sentirse un poco abrupto el salto de la inspiración al código. Tal vez podría haber una actividad intermedia que combine ambas cosas.
+
+## Comentario adicional
+**R//** En general, me gustó mucho la unidad. Me hizo ver que es posible unir lo creativo con lo tecnológico de una manera divertida y significativa. Me gustaría que en las próximas unidades haya más espacio para experimentar libremente con lo aprendido, y quizás trabajar en mini proyectos personales desde el inicio.
