@@ -4,7 +4,7 @@
 
 # 📘 Bitácora de Actividades
 
-## Actividad 01
+## Actividad 1
 
 ### ¿Cómo funciona este ejemplo?
 
@@ -32,7 +32,7 @@ Las acciones que realiza cada objeto Pixel estàn definidas dentro del mètodo u
 
 ---
 
-## Actividad 02: Implementando un semáforo con máquina de estados
+## Actividad 2: Implementando un semáforo con máquina de estados
 
 ### Descripción
 
@@ -79,3 +79,38 @@ semaforo = Semaforo()
 
 while True:
     semaforo.update()
+```
+
+## Actividad 3: 
+
+### ¿Por qué este programa permite realizar varias tareas a la vez?
+
+El programa está diseñado con una máquina de estados que revisa constantemente dos cosas: 
+si ha pasado cierto tiempo para cambiar la imagen y si se ha presionado el botón A. Aunque el micro:bit solo hace una cosa por vez,
+eso permite que el sistema parezca hacer ambas cosas al mismo tiempo: seguir una secuencia automática y responder rápido al usuario.
+
+### Estados, eventos y acciones
+
+- **Estados:** INIT, HAPPY, SMILE y SAD.  
+- **Eventos:** Presionar el botón A o que pase el tiempo definido para cada estado.  
+- **Acciones:** Mostrar una imagen, reiniciar el temporizador y cambiar de estado.
+
+### Vectores de prueba según como lo describe la máquina de estados
+
+#### Prueba 1  
+- **Estado:** HAPPY  
+- **Evento:** botón A  
+- **Resultado esperado:** pasa a SAD  
+- Funciona correctamente
+
+#### Prueba 2  
+- **Estado:** SMILE  
+- **Evento:** botón A  
+- **Resultado esperado:** pasa a HAPPY  
+- Funciona correctamente
+
+#### Prueba 3  
+- **Estado:** SAD  
+- **Evento:** pasa el tiempo  
+- **Resultado esperado:** pasa a HAPPY  
+- Funciona correctamente
