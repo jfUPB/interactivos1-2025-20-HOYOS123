@@ -217,5 +217,3 @@ La siguiente tabla resume los vectores de prueba de la bomba 3.0:
 | ARMED | Clave correcta `A-B-A` | Reinicia contador en 20 y regresa a config | CONFIG |
 | ARMED | Clave incorrecta | Borra la clave y sigue igual | ARMED |
 | EXPLODED | `T` | Reinicia contador (20) y limpia pantalla | CONFIG |
-
-
