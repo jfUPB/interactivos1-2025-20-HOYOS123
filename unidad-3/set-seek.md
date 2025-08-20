@@ -14,7 +14,6 @@ display.clear()
 
 ---------------------------
 # Event bus (única fuente de verdad)
----------------------------
 class Event:
     def __init__(self):
         self.value = 0  # 0 = sin evento
@@ -33,12 +32,11 @@ event = Event()
 
 ---------------------------
 # Fuentes de eventos
----------------------------
 class SerialTask:
     def __init__(self):
         # Ajusta baudrate si lo requieres
         uart.init(baudrate=115200)
-
+---------------------------
     def update(self):
         # Lee de a 1 byte para eventos simples
         if uart.any():
@@ -70,7 +68,6 @@ class ButtonTask:
 
 ---------------------------
 # Máquina de estados de la bomba
----------------------------
 class BombTask:
     def __init__(self):
         self.PASSWORD = ['A', 'B', 'A']
@@ -165,10 +162,8 @@ class BombTask:
                 self.startTime = utime.ticks_ms()
                 self._reset_key()
                 self.state = 'CONFIG'
-
 ---------------------------
 # Instanciación y bucle principal
----------------------------
 serialTask = SerialTask()
 buttonTask = ButtonTask()
 bombTask = BombTask()
@@ -179,7 +174,7 @@ while True:
     buttonTask.update()
     bombTask.update()
     utime.sleep_ms(10)  # pequeño respiro al CPU
-
+---------------------------
 
 # Bitácora - Actividad 05
 
@@ -222,4 +217,5 @@ La siguiente tabla resume los vectores de prueba de la bomba 3.0:
 | ARMED | Clave correcta `A-B-A` | Reinicia contador en 20 y regresa a config | CONFIG |
 | ARMED | Clave incorrecta | Borra la clave y sigue igual | ARMED |
 | EXPLODED | `T` | Reinicia contador (20) y limpia pantalla | CONFIG |
+
 
