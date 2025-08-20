@@ -2,19 +2,19 @@
 
 ## 🔎 Fase: Set + Seek
 
-# Bomba 3.0 - MicroPython (micro:bit)
-# Máquina de estados controlada por EVENTOS genéricos desde:
-# - Botones/gestos del micro:bit
-# - Puerto serial (p5.js, terminal, etc.)
+# Bomba 3.0
+### Máquina de estados controlada por EVENTOS genéricos desde:
+- Botones/gestos del micro:bit
+- Puerto serial (p5.js, terminal, etc.)
 
 from microbit import *
 import utime
 
 display.clear()
 
-# ---------------------------
+---------------------------
 # Event bus (única fuente de verdad)
-# ---------------------------
+---------------------------
 class Event:
     def __init__(self):
         self.value = 0  # 0 = sin evento
@@ -31,9 +31,9 @@ class Event:
 # Instancia global de eventos (consumida por BombTask)
 event = Event()
 
-# ---------------------------
+---------------------------
 # Fuentes de eventos
-# ---------------------------
+---------------------------
 class SerialTask:
     def __init__(self):
         # Ajusta baudrate si lo requieres
@@ -68,9 +68,9 @@ class ButtonTask:
         elif pin_logo.is_touched():
             event.set('T')
 
-# ---------------------------
+---------------------------
 # Máquina de estados de la bomba
-# ---------------------------
+---------------------------
 class BombTask:
     def __init__(self):
         self.PASSWORD = ['A', 'B', 'A']
@@ -166,9 +166,9 @@ class BombTask:
                 self._reset_key()
                 self.state = 'CONFIG'
 
-# ---------------------------
+---------------------------
 # Instanciación y bucle principal
-# ---------------------------
+---------------------------
 serialTask = SerialTask()
 buttonTask = ButtonTask()
 bombTask = BombTask()
@@ -222,3 +222,4 @@ La siguiente tabla resume los vectores de prueba de la bomba 3.0:
 | ARMED | Clave correcta `A-B-A` | Reinicia contador en 20 y regresa a config | CONFIG |
 | ARMED | Clave incorrecta | Borra la clave y sigue igual | ARMED |
 | EXPLODED | `T` | Reinicia contador (20) y limpia pantalla | CONFIG |
+
