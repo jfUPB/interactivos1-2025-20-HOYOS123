@@ -28,11 +28,15 @@ Son las reglas que indican cómo se pasa de un estado a otro (por ejemplo, de CO
 #### Explica por qué la técnica de máquina de estados es tan útil para gestionar la “concurrencia” (atender varios eventos y tareas “al mismo tiempo”) en un dispositivo con un solo hilo de ejecución como el micro:bit o en p5.js. ¿Qué problema soluciona en comparación con usar funciones como sleep()?
 **R//** La técnica de máquina de estados es muy útil para mí porque permite que organice bien un programa, ajustando su comportamiento en estados claros y que vaya reaccionando a los eventos que ocurren sin detenerse nunca.
 
-Los dispositivos micro:bit y p5.js son con un solo hilo de ejecución, Esto significa que el programa no puede hacer dos o más cosas al mismo tiempo. La máquina de estados resuelve eso al simular **concurrencia** per solo se ejecuta una instrucción a la vez, el programa revisa constantemente en qué estado está y qué evento debe atender, dando la sensación de que gestiona varias tareas al mismo tiempo.
+Los dispositivos micro:bit y p5.js son con un solo hilo de ejecución, Esto significa que el programa no puede hacer dos o más cosas al mismo tiempo. La máquina de estados resuelve eso al simular **concurrencia** pero solo se ejecuta una instrucción a la vez, el programa revisa constantemente en qué estado está y qué evento debe atender, dando la sensación de que gestiona varias tareas al mismo tiempo.
 
 Esto soluciona el gran problema de usar la función sleep(), ya que esta hace que se pause completamente el programa y también bloquea que el sistema atienda otros eventos. En cambio, con una máquina de estados el código nunca se detiene; solo se actualiza el estado en cada ciclo y se reacciona a lo que pase, manteniendo el programa en funcionamiento.
+
 ---------------------------------------------
 #### Imagina que tienes que añadir una nueva funcionalidad a la bomba: si se recibe un evento especial (por ejemplo, una combinación de botones o un comando serial) mientras la cuenta regresiva está activa, el tiempo se reduce a la mitad. ¿Cómo modificarías tu diagrama de máquina de estados para incluir este nuevo evento y acción?
+**R//** Si quiero añadir una funcionalidad más, no necesito crear un estado nuevo: la bomba puede seguir estando en "ARMED" (Conteo regresivo), pero si puedo crear un evento más que ocurra dentro de este estado.
+
+Por ejemplo, cuando llego a ese evento la máquina no cambia de estado, pero ejecuta una acción interna... puede ser, dividir el tiempo restante por la mitad. Es decir, sigo en el mismo estado "ARMED" pero con un cambio en la variable de tiempo.
 
 --------------------------------------------
 #### Explica qué es un “vector de prueba” y por qué es una herramienta crucial para verificar que una máquina de estados funciona como se espera.
@@ -51,4 +55,5 @@ Esto soluciona el gran problema de usar la función sleep(), ya que esta hace qu
 #### Ahora que entiendes el patrón de máquina de estados, ¿En qué otro tipo de proyecto o sistema de entretenimiento digital crees que podrías aplicarlo?
 
 --------------------------------------------
+
 
