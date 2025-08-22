@@ -244,15 +244,16 @@ import random
 
 while True:
     if button_a.was_pressed():
-        uart.write("a\n")   # Aumentar tiempo
+        uart.write("a\n")
     if button_b.was_pressed():
-        uart.write("b\n")   # Disminuir tiempo
+        uart.write("b\n")
     
     if accelerometer.was_gesture("shake"):
-        uart.write("s\n")   # Activar bomba
+        uart.write("s\n")
     
-    if pin_logo.is_touched():  # Reiniciar si explotó
+    if pin_logo.is_touched():
         uart.write("r\n")
     
     sleep(100)
 ```
+
