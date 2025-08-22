@@ -1,6 +1,8 @@
 # Unidad 3
 
-## 🔎 Fase: Set + Seek
+## 🔎 Fase: Set + Seek (No hay evidencias de la actividad. Es nota la deja el profesor)
+
+El siguiente trabajo aparece luego del plazo. No se tendrá en cuanta para la nota.
 
 # Bomba 3.0
 ### Máquina de estados controlada por EVENTOS genéricos desde:
@@ -217,3 +219,4 @@ La siguiente tabla resume los vectores de prueba de la bomba 3.0:
 | ARMED | Clave correcta `A-B-A` | Reinicia contador en 20 y regresa a config | CONFIG |
 | ARMED | Clave incorrecta | Borra la clave y sigue igual | ARMED |
 | EXPLODED | `T` | Reinicia contador (20) y limpia pantalla | CONFIG |
+
