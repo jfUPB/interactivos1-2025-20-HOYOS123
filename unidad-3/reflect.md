@@ -40,10 +40,13 @@ Por ejemplo, cuando llego a ese evento la máquina no cambia de estado, pero eje
 
 --------------------------------------------
 #### Explica qué es un “vector de prueba” y por qué es una herramienta crucial para verificar que una máquina de estados funciona como se espera.
+**R//** Es una herramienta que permite mirar que la máquina de estados está respondiendo a todos los eventos de manera correcta. En vez de probar a azar, los vectores de prueba obligan a comprobar en en cada transición para que no hayan errores. así asegura que el sistema no se dañe o entre en estados inválidos.
 
 --------------------------------------------
 ### Parte 2: reflexión sobre tu proceso (Metacognición)
+
 #### ¿Qué parte del diseño de la bomba te resultó más desafiante: crear el diagrama de estados o traducir ese diagrama a código? ¿Por qué?
+**R//** Lo que me pareció más complicado fue intentar hacer que el código funcionara en ambos lados (Micro:bit y p5.js) Mejor dicho, el hecho de poder controlarla desde estos dos simuladores me pareció lo más compicado y lo que menos entiendo.
 
 --------------------------------------------
 #### Describe un error o “bug” que encontraste al implementar tu programa. ¿Cómo te ayudó pensar en términos de estados, eventos y transiciones a identificar y solucionar el problema?
@@ -55,5 +58,6 @@ Por ejemplo, cuando llego a ese evento la máquina no cambia de estado, pero eje
 #### Ahora que entiendes el patrón de máquina de estados, ¿En qué otro tipo de proyecto o sistema de entretenimiento digital crees que podrías aplicarlo?
 
 --------------------------------------------
+
 
 
