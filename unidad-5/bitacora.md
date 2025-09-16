@@ -55,10 +55,14 @@ R//
 ---
 
 ### 1. Captura el resultado del experimento anterior. (Datos binarios en SerialTerminal) ¿Por qué se ve este resultado?
-R//
+R// Cuando el micro:bit envía la información en formato binario, estos datos no se pueden leer directamente como texto, ya que están codificados en bytes compactos usando `struct.pack`.  
+Si abrimos el SerialTerminal en modo "texto", lo que aparece son símbolos y caracteres raros. Esto pasa porque el terminal intenta mostrar cada byte como si fuera una letra del código ASCII.  
+
+Para interpretar esos datos de manera correcta, no basta con un visor de texto. Lo que necesitamos es un programa que entienda que esos bytes representan valores numéricos. Un ejemplo de esto será en la siguiente actividad con **p5.js**, donde podremos visualizar los datos como enteros binarios y darles un sentido.
 
 ### 2. Captura el resultado del experimento anterior. Lo que ves ¿Cómo está relacionado con esta línea de código?
-R//
+R// El monitor serial muestra símbolos raros porque los datos van en binario.  
+`struct.pack` empaqueta los valores en bytes: eficiente para enviar, pero ilegible para leer a simple vista.
 
 ### 3. ¿Qué ventajas y desventajas ves en usar un formato binario en lugar de texto en ASCII?
 R//
@@ -71,3 +75,4 @@ R//
 
 ### 6. Captura el resultado del experimento. ¿Qué diferencias ves entre los datos en ASCII y en binario? ¿Qué ventajas y desventajas ves en usar un formato binario en lugar de texto en ASCII? ¿Qué ventajas y desventajas ves en usar un formato ASCII en lugar de binario?
 R//
+
