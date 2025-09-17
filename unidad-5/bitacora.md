@@ -1,7 +1,5 @@
 # Evidencias de la unidad 5
-
 ---
-
 ## Actividad 01: Repasa el caso de estudio
 
 ### 1. ¿Cómo se están comunicando el micro:bit y el sketch de p5.js? ¿Qué datos envía el micro:bit?
@@ -43,9 +41,7 @@ if (port.availableBytes() > 0) {
 ### 4. ¿Cómo se generan los eventos A pressed y B released en p5.js?
 **R//** En la función updateButtonStates(newAState, newBState) donde el evento "A pressed" ocurre cuando el estado de A pasa de false a true, y el evento "B released" ocurre cuando el estado de B pasa de true a false. Estos datos permiten controlar la generación de color, tamaño y posición de los gráficos en pantalla.
 
-
 ### 5. Capturas de pantalla de los dibujos hechos.
-[Captura]()
 
 ---
 
@@ -73,9 +69,6 @@ En cambio, en ASCII todo es legible a simple vista, pero ocupa mucho más espaci
 
 ### 4. Captura el resultado del experimento. ¿Cuántos bytes se están enviando por mensaje? ¿Cómo se relaciona esto con el formato '>2h2B'? ¿Qué significa cada uno de los bytes que se envían?
 **R//** Cada mensaje ocupa 6 bytes. Esto se deduce directamente del formato '>2h2B':
-
-
-
 ```
 > → orden big-endian.
 2h → dos enteros cortos, 2 bytes cada uno = 4 bytes.
@@ -125,5 +118,3 @@ En cambio, en **binario** los datos viajan como bytes compactos. Eso hace que to
 
 ### 6. ¿Qué cambios tienen los programas y qué puedes observar en la consola del editor de p5.js?
 **R//** El programa ahora combina las teclas con los botones del micro:bit. Con el botón A hago que las líneas giren, con el botón B cambio el color y también el tamaño dependiendo del color. Las teclas del teclado siguen funcionando para otras funciones. En la consola se nota que los datos llegan ordenados y que ya no se producen errores de sincronización como antes.
-
-
