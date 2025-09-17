@@ -53,7 +53,7 @@ if (port.availableBytes() > 0) {
 
 ### 1. Captura el resultado del experimento anterior. (Datos binarios en SerialTerminal) ¿Por qué se ve este resultado?
 
-[Captura](<img width="997" height="726" alt="Captura de pantalla 2025-09-17 145954" src="https://github.com/user-attachments/assets/618fd3e1-ab89-4e9a-9581-38436b86baa6" />)
+<img width="997" height="726" alt="Captura de pantalla 2025-09-17 145954" src="https://github.com/user-attachments/assets/618fd3e1-ab89-4e9a-9581-38436b86baa6" />
 
 **R//** Cuando el micro:bit envía la información en formato binario, estos datos no se pueden leer directamente como texto, ya que están codificados en bytes compactos usando `struct.pack`.  
 Si abrimos el SerialTerminal en modo "texto", lo que aparece son símbolos y caracteres raros. Esto pasa porque el terminal intenta mostrar cada byte como si fuera una letra del código ASCII.  
@@ -62,7 +62,7 @@ Para interpretar esos datos de manera correcta, no basta con un visor de texto. 
 
 ### 2. Captura el resultado del experimento anterior. Lo que ves ¿Cómo está relacionado con esta línea de código?
 
-[Captura](<img width="999" height="728" alt="Captura de pantalla 2025-09-17 150130" src="https://github.com/user-attachments/assets/0a1c1046-c37a-44ec-bb20-af71093829e0" />)
+<img width="999" height="728" alt="Captura de pantalla 2025-09-17 150130" src="https://github.com/user-attachments/assets/0a1c1046-c37a-44ec-bb20-af71093829e0" />
 
 **R//** El monitor serial muestra símbolos raros porque los datos van en binario.  
 `struct.pack` empaqueta los valores en bytes: eficiente para enviar, pero ilegible para leer a simple vista.
@@ -74,7 +74,7 @@ En cambio, en ASCII todo es legible a simple vista, pero ocupa mucho más espaci
 ### 4. Captura el resultado del experimento. ¿Cuántos bytes se están enviando por mensaje? ¿Cómo se relaciona esto con el formato '>2h2B'? ¿Qué significa cada uno de los bytes que se envían?
 **R//** Cada mensaje ocupa 6 bytes. Esto se deduce directamente del formato '>2h2B':
 
-[Captura]()
+
 
 ```
 > → orden big-endian.
@@ -98,7 +98,7 @@ Cada byte tiene un propósito definido:
 
 ### 6. Captura el resultado del experimento. ¿Qué diferencias ves entre los datos en ASCII y en binario? ¿Qué ventajas y desventajas ves en usar un formato binario en lugar de texto en ASCII? ¿Qué ventajas y desventajas ves en usar un formato ASCII en lugar de binario?
 
-[Captura](<img width="996" height="726" alt="Captura de pantalla 2025-09-17 151250" src="https://github.com/user-attachments/assets/d6523df6-9570-4f69-a4d6-14f0ee4286be" />)
+<img width="996" height="726" alt="Captura de pantalla 2025-09-17 151250" src="https://github.com/user-attachments/assets/d6523df6-9570-4f69-a4d6-14f0ee4286be" />
 
 **R//** Cuando los datos se mandan en **ASCII**, se pueden leer fácilmente porque salen en texto claro, como los números separados por comas. Eso me sirve mucho para probar y entender qué está pasando. El problema es que ocupa más espacio y la comunicación se vuelve un poco más lenta.  
 
@@ -125,4 +125,5 @@ En cambio, en **binario** los datos viajan como bytes compactos. Eso hace que to
 
 ### 6. ¿Qué cambios tienen los programas y qué puedes observar en la consola del editor de p5.js?
 **R//** El programa ahora combina las teclas con los botones del micro:bit. Con el botón A hago que las líneas giren, con el botón B cambio el color y también el tamaño dependiendo del color. Las teclas del teclado siguen funcionando para otras funciones. En la consola se nota que los datos llegan ordenados y que ya no se producen errores de sincronización como antes.
+
 
