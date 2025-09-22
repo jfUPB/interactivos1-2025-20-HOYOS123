@@ -18,7 +18,6 @@ Cada 100 ms (10 Hz) envía una línea con cuatro valores separados por comas y t
 - Los datos son enviados como texto legible.
 - Las comas separan los campos.
 - El salto de línea \\n indica el final del mensaje.
-- 
 
 ### 3. Parte del código en p5.js donde se leen los datos del micro:bit y se transforman en coordenadas
 **R//**
@@ -119,4 +118,8 @@ En cambio, en **binario** los datos viajan como bytes compactos. Eso hace que to
 
 ### 6. ¿Qué cambios tienen los programas y qué puedes observar en la consola del editor de p5.js?
 **R//** El programa ahora combina las teclas con los botones del micro:bit. Con el botón A hago que las líneas giren, con el botón B cambio el color y también el tamaño dependiendo del color. Las teclas del teclado siguen funcionando para otras funciones. En la consola se nota que los datos llegan ordenados y que ya no se producen errores de sincronización como antes.
+
+---
+
+# Fase Reflect:
 
