@@ -1,5 +1,7 @@
 # Evidencias de la unidad 5
 ---
+
+# Fase Apply
 ## Actividad 01: Repasa el caso de estudio
 
 ### 1. ¿Cómo se están comunicando el micro:bit y el sketch de p5.js? ¿Qué datos envía el micro:bit?
@@ -122,4 +124,5 @@ En cambio, en **binario** los datos viajan como bytes compactos. Eso hace que to
 ---
 
 # Fase Reflect:
+
 
