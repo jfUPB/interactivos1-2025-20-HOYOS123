@@ -123,6 +123,7 @@ En cambio, en **binario** los datos viajan como bytes compactos. Eso hace que to
 **R//** El programa ahora combina las teclas con los botones del micro:bit. Con el botón A hago que las líneas giren, con el botón B cambio el color y también el tamaño dependiendo del color. Las teclas del teclado siguen funcionando para otras funciones. En la consola se nota que los datos llegan ordenados y que ya no se producen errores de sincronización como antes.
 
 ---
+---
 
 # Fase Reflect:
 
@@ -206,5 +207,28 @@ Con `DataView` puedo reconstruirlos correctamente:
 - `getUint8(4)` y `getUint8(5)` → interpretan 1 byte cada uno como valores de los botones.  
 
 Si intentara leer el buffer directamente, no tendría la separación ni el formato correcto de los datos.
+
+---
+---
+
+# Autoevaluación según la rúbrica
+
+- **Comprensión de conceptos técnicos:**  
+  Creo que entendí bien los conceptos de esta unidad, como el byte de sincronización y la diferencia entre ASCII y binario. Lo expliqué en la bitácora con mis palabras y mostré cómo se aplican en el código.  
+
+- **Aplicación práctica:**  
+  Logré relacionar lo visto en clase con los ejemplos. Expliqué cómo se arman los paquetes de 8 bytes, cómo se usan `slice` y `splice`, y por qué `DataView` es necesario para interpretar los datos.  
+
+- **Claridad y comunicación:**  
+  Mis respuestas son claras y directas. Usé listas, tablas y ejemplos para que todo se entienda mejor.  
+
+- **Reflexión:**  
+  Comparé ventajas y desventajas de ASCII y binario, y expliqué en qué casos usaría cada uno. Eso me ayudó a entender mejor por qué se hace todo así.  
+
+---
+
+### Nota propuesta: **4.5 / 5**  
+Pienso que hice un buen trabajo en esta unidad, entendí los conceptos y los apliqué bien en la práctica.
+
 
 
