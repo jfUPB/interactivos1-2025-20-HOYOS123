@@ -17,9 +17,10 @@
    lo que se ve en page1 es prácticamente lo mismo que en page2; ambas muestran los mismos elementos (dos círculos rojos y la línea que los une).
    
 6. **¿Qué mensajes aparecieron en la terminal del servidor cuando abriste `page1` y `page2`?**
-   **R//**
+   **R//** Conectando con el servidor...
 
 7. **Describe qué sucede en ambas páginas del navegador cuando mueves una de las ventanas.**  
    - ¿Cambia algo visualmente? **R//** El ejercicio usa sincronización de ventanas, entonces lo que hagas en page1 se refleja en page2 y viceversa. Ya sea mover la pestaña por toda la pantalla o juntar los círculos.
      
    - ¿Qué mensajes aparecen (si los hay) en la consola del navegador (usualmente accesible con `F12 -> Pestaña Consola`) y en la terminal del servidor? **R//** Aparecen mensajes con las actualizaciones de posición de la ventana y confirmaciones de sincronización.
+
