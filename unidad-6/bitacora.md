@@ -83,10 +83,6 @@ Si solo escribo `www.wikipedia.org` sin ruta, el servidor me envía la página p
 
 ---
 
-# Bitácora
-
----
-
 ## 6. Comparación entre `draw()` en p5.js y el modelo basado en eventos
 
 En p5.js, el bucle `draw()` se ejecuta constantemente, lo que es útil para animaciones o gráficos que necesitan actualizarse todo el tiempo. Pero, en la web, JavaScript funciona de una forma diferente: en lugar de ejecutarse todo el tiempo, espera a que ocurran eventos (como un clic o un mensaje) y entonces ejecuta una función específica.
@@ -114,4 +110,5 @@ Además, es más fácil para alguien que está aprendiendo, porque no tiene que 
 La diferencia más importante que veo es que con HTTP, el navegador siempre tiene que pedir algo para recibir una respuesta. Es como mandar un mensaje y esperar la respuesta. En cambio, con WebSockets (y con Socket.IO), se abre una conexión continua entre el navegador y el servidor. Eso permite que ambos puedan enviarse mensajes en cualquier momento, sin pedir permiso cada vez.
 
 Este tipo de comunicación en tiempo real es ideal para cosas como chats, videojuegos, pizarras colaborativas o cualquier aplicación donde lo que pasa debe verse al instante en el otro lado.
+
 
