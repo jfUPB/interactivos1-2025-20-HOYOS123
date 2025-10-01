@@ -28,7 +28,7 @@
 # Bitácora sobre Internet
 ---
 
-## 1. Conexión a Internet
+## 1. **¿Qué es Internet?**
 **R//** En mi casa, me conecto a Internet usando **Wi-Fi**. Mi computadora se conecta de forma inalámbrica a un módem/router, que está conectado por un cable al proveedor de Internet. Esa conexión Wi-Fi es como mi "rampa" de acceso a esta gran red de carreteras.
 
 Si la rampa se rompe, por ejemplo, si el Wi-Fi se cae o el cable del módem se desconecta, ya no puedo acceder a ninguna página web ni servicio en línea. Sería como si mi vehículo quedara atrapado sin poder salir a la carretera, sin acceso a los servidores que contienen la información que necesito.
@@ -110,5 +110,6 @@ Además, es más fácil para alguien que está aprendiendo, porque no tiene que 
 La diferencia más importante que veo es que con HTTP, el navegador siempre tiene que pedir algo para recibir una respuesta. Es como mandar un mensaje y esperar la respuesta. En cambio, con WebSockets (y con Socket.IO), se abre una conexión continua entre el navegador y el servidor. Eso permite que ambos puedan enviarse mensajes en cualquier momento, sin pedir permiso cada vez.
 
 Este tipo de comunicación en tiempo real es ideal para cosas como chats, videojuegos, pizarras colaborativas o cualquier aplicación donde lo que pasa debe verse al instante en el otro lado.
+
 
 
