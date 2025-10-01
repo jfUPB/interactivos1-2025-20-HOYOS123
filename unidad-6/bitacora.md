@@ -28,21 +28,24 @@
 # Bitácora sobre Internet
 ---
 
-## 1. **¿Qué es Internet? ¿Usas Wi-Fi?** ¿Un cable de red? ¿Qué pasaría si esa rampa se corta?
+## 1. **¿Qué es Internet? 
+¿Usas Wi-Fi?** ¿Un cable de red? ¿Qué pasaría si esa rampa se corta?
 **R//** En mi casa, me conecto a Internet usando **Wi-Fi**. Mi computadora se conecta de forma inalámbrica a un módem/router, que está conectado por un cable al proveedor de Internet. Esa conexión Wi-Fi es como mi "rampa" de acceso a esta gran red de carreteras.
 
 Si la rampa se rompe, por ejemplo, si el Wi-Fi se cae o el cable del módem se desconecta, ya no puedo acceder a ninguna página web ni servicio en línea. Sería como si mi vehículo quedara atrapado sin poder salir a la carretera, sin acceso a los servidores que contienen la información que necesito.
 
 ---
 
-## 2. **Navegador y Servidor** ¿Puedes identificar otros ejemplos de relaciones Cliente-Servidor en tu vida diaria? ¿Quién es el cliente y quién el servidor? ¿Qué se pide y qué se entrega?
+## 2. **Navegador y Servidor** 
+¿Puedes identificar otros ejemplos de relaciones Cliente-Servidor en tu vida diaria? ¿Quién es el cliente y quién el servidor? ¿Qué se pide y qué se entrega?
 **R//** Un ejemplo claro de la relación Cliente-Servidor fuera del mundo digital es cuando voy a un restaurante. Yo soy el cliente, pido comida al mesero (que podríamos considerarlo como un “cliente” del chef). El chef actúa como el servidor, quien recibe la orden y prepara la comida para entregarla al cliente.
 
 Otro ejemplo puede ser una biblioteca física: yo como cliente pido un libro en el mostrador, y el bibliotecario es el servidor que busca y me entrega el libro solicitado.
 
 ---
 
-## 3. **¿Qué es una URL?** ¿Qué crees que pasa si solo escribes el nombre de dominio sin una ruta específica? ¿Qué “página por defecto” crees que te envía el servidor?
+## 3. **¿Qué es una URL?** 
+¿Qué crees que pasa si solo escribes el nombre de dominio sin una ruta específica? ¿Qué “página por defecto” crees que te envía el servidor?
 
 Mi sitio de ejemplo: `https://www.wikipedia.org/wiki/Internet` (No es mi favorito pero lo utilicé mucho en mis tiempos del colegio)
 
@@ -54,7 +57,8 @@ Si solo escribo `www.wikipedia.org` sin ruta, el servidor me envía la página p
 
 ---
 
-## 4. **Protocolo HTTP vs protocolos seriales** ¿Qué similitudes encuentras? ¿Qué diferencias clave ves? ¿Por qué crees que HTTP necesita ser más complejo que un simple envío de bytes como hacías con el micro:bit?
+## 4. **Protocolo HTTP vs protocolos seriales** 
+¿Qué similitudes encuentras? ¿Qué diferencias clave ves? ¿Por qué crees que HTTP necesita ser más complejo que un simple envío de bytes como hacías con el micro:bit?
 
 **Similitudes:**
 - Ambos definen reglas para que dos partes puedan comunicarse correctamente.
@@ -70,7 +74,8 @@ Si solo escribo `www.wikipedia.org` sin ruta, el servidor me envía la página p
 
 ---
 
-## 5. **HTML, CSS y JavaScript** ¿Qué parte crees que es HTML? ¿Qué parte es CSS? ¿Qué parte es JavaScript?
+## 5. **HTML, CSS y JavaScript** 
+¿Qué parte crees que es HTML? ¿Qué parte es CSS? ¿Qué parte es JavaScript?
 
 - **HTML:**  
   Campos de texto para usuario y contraseña, botón de enviar.
@@ -83,7 +88,8 @@ Si solo escribo `www.wikipedia.org` sin ruta, el servidor me envía la página p
 
 ---
 
-## 6. **draw() vs eventos** ¿Qué ventajas crees que tiene el modelo basado en eventos para una interfaz de usuario web? ¿Sería eficiente tener un bucle draw() redibujando toda la página 60 veces por segundo si nada ha cambiado?
+## 6. **draw() vs eventos** 
+¿Qué ventajas crees que tiene el modelo basado en eventos para una interfaz de usuario web? ¿Sería eficiente tener un bucle draw() redibujando toda la página 60 veces por segundo si nada ha cambiado?
 
 En p5.js, el bucle `draw()` se ejecuta constantemente, lo que es útil para animaciones o gráficos que necesitan actualizarse todo el tiempo. Pero, en la web, JavaScript funciona de una forma diferente: en lugar de ejecutarse todo el tiempo, espera a que ocurran eventos (como un clic o un mensaje) y entonces ejecuta una función específica.
 
@@ -97,7 +103,8 @@ Definitivamente no. Sería un desperdicio de recursos y podría hacer que la pá
 
 ---
 
-## 7. **¿Qué es Node.js?** ¿Por qué crees que podría ser útil usar JavaScript tanto en el cliente (navegador) como en el servidor? ¿Se te ocurre alguna ventaja para los desarrolladores?
+## 7. **¿Qué es Node.js?** 
+¿Por qué crees que podría ser útil usar JavaScript tanto en el cliente (navegador) como en el servidor? ¿Se te ocurre alguna ventaja para los desarrolladores?
 
 Creo que usar JavaScript tanto en el navegador como en el servidor es muy útil porque permite a los desarrolladores trabajar con un solo lenguaje en ambos lados. Eso hace que el desarrollo sea más rápido, que haya menos errores por diferencias entre lenguajes y que se pueda incluso reutilizar código.
 
@@ -105,11 +112,13 @@ Además, es más fácil para alguien que está aprendiendo, porque no tiene que 
 
 ---
 
-## 8. **WebSockets y Socket.IO** ¿En qué tipo de aplicaciones has visto o podrías imaginar que se usa esta comunicación en tiempo real?
+## 8. **WebSockets y Socket.IO** 
+¿En qué tipo de aplicaciones has visto o podrías imaginar que se usa esta comunicación en tiempo real?
 
 La diferencia más importante que veo es que con HTTP, el navegador siempre tiene que pedir algo para recibir una respuesta. Es como mandar un mensaje y esperar la respuesta. En cambio, con WebSockets (y con Socket.IO), se abre una conexión continua entre el navegador y el servidor. Eso permite que ambos puedan enviarse mensajes en cualquier momento, sin pedir permiso cada vez.
 
 Este tipo de comunicación en tiempo real es ideal para cosas como chats, videojuegos, pizarras colaborativas o cualquier aplicación donde lo que pasa debe verse al instante en el otro lado.
+
 
 
 
