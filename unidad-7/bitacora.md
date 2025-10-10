@@ -48,8 +48,12 @@ B) **IP local:**
   - *Desventajas:* Solo funciona si ambos dispositivos están en la misma red y puede fallar por firewalls o configuraciones del router.  
 
 4. **📸 Capturas de pantalla**  
-*(Se adjuntan imágenes mostrando la aplicación funcionando con el cliente mobile, el cliente desktop y la terminal con los mensajes del servidor.)*
+<img width="1459" height="910" alt="image" src="https://github.com/user-attachments/assets/d4c56122-4c7d-4ae5-a24b-5dffb074a74f" />
+<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/341bd57e-21ba-4701-bcde-26aed2a99546" />
+<img width="1271" height="515" alt="image" src="https://github.com/user-attachments/assets/4bcfe9a4-a4e5-44c5-bb54-e95647158d2c" />
 
----
+**Mira la demostración aquí:**  
+[https://www.youtube.com/watch?v=XXXXXXXXXXX](https://youtube.com/shorts/SgP_dZ62z74?feature=share)
+
 
 
