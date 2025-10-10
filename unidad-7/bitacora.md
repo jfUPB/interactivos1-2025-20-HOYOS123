@@ -25,7 +25,7 @@ Cada cliente tenía un identificador diferente, lo que ayudaba al servidor a dis
 
 ---
 
-## Actividad 02: Conectividad y comunicación entre dispositivos  
+## ACTIVIDAD 02: Conectividad y comunicación entre dispositivos  
 
 1. **¿Por qué es necesario Dev Tunnels en este escenario y cómo funciona conceptualmente?**  
 **R//** Es necesario porque permite que un servidor local (que normalmente solo se puede acceder desde el mismo computador) sea visible en Internet públicamente.  
@@ -54,6 +54,7 @@ B) **IP local:**
 
 **Mira la demostración aquí:**  
 [https://www.youtube.com/watch?v=XXXXXXXXXXX](https://youtube.com/shorts/SgP_dZ62z74?feature=share)
+
 
 
 
