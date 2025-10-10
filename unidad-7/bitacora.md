@@ -47,13 +47,52 @@ B) **IP local:**
   - *Ventajas:* No necesita Internet, solo una red local; puede ser más rápido en entornos cerrados.  
   - *Desventajas:* Solo funciona si ambos dispositivos están en la misma red y puede fallar por firewalls o configuraciones del router.  
 
-4. **📸 Capturas de pantalla**  
+4. **📸 Capturas de pantalla**
+
+**R//** Computador.
+
 <img width="1459" height="910" alt="image" src="https://github.com/user-attachments/assets/d4c56122-4c7d-4ae5-a24b-5dffb074a74f" />
+
+**R//** Celular.
+
 <img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/341bd57e-21ba-4701-bcde-26aed2a99546" />
+
+**R//** Terminal.
+
 <img width="1271" height="515" alt="image" src="https://github.com/user-attachments/assets/4bcfe9a4-a4e5-44c5-bb54-e95647158d2c" />
 
 **Mira la demostración aquí:**  
-[https://www.youtube.com/watch?v=XXXXXXXXXXX](https://youtube.com/shorts/SgP_dZ62z74?feature=share)
+[Video demostrativo](https://youtube.com/shorts/SgP_dZ62z74?feature=share)
+
+---
+
+## ACTIVIDAD 03: Análisis del servidor (server.js)
+
+1. **¿Cuál es la función principal de `express.static('public')` en este servidor?**  
+**R//** Sirve para que el servidor muestre automáticamente todos los archivos que están en la carpeta **public**, como los HTML, CSS o scripts.  
+A diferencia del `app.get('/ruta', …)` que usábamos antes, aquí no hay que crear rutas manualmente, todo se sirve de una forma más simple y directa.  
+
+
+2. **Explica detalladamente el flujo de un mensaje táctil:**  
+**R//** Cuando muevo el dedo en la pantalla del celular, la función `touchMoved()` envía un mensaje con las coordenadas del movimiento.  
+El servidor recibe ese mensaje con `socket.on('message')`, lo muestra en la consola y luego lo reenvía a los demás clientes con `socket.broadcast.emit`.  
+El escritorio recibe ese mensaje y actualiza la posición del círculo en tiempo real.  
+Se usa `socket.broadcast.emit` porque así el mensaje llega a todos menos al que lo envió, evitando que el celular reciba su propio mensaje.  
+
+
+3. **Si conectaras dos computadores de escritorio y un móvil a este servidor, y movieras el dedo en el móvil, ¿Quién recibiría el mensaje retransmitido por el servidor? ¿Por qué?**  
+**R//** Los dos computadores de escritorio recibirían el mensaje, porque el servidor lo envía a todos los demás clientes conectados, excepto al que lo envió (el celular).  
+
+
+4. **¿Qué información útil te proporcionan los mensajes `console.log` en el servidor durante la ejecución?**  
+**R//** Sirven para ver lo que está pasando en el servidor: cuándo se conecta o se desconecta un cliente, y qué mensajes se están enviando.  
+De esa forma uno puede comprobar si todo está funcionando bien o si hay algún problema en la comunicación.
+
+---
+
+
+
+
 
 
 
