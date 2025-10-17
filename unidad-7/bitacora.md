@@ -1,6 +1,7 @@
 # Evidencias de la unidad 7
 ---
 
+
 ## ACTIVIDAD 01: Conexión entre el celular y el computador
 
 1. **¿Qué URL de Dev Tunnels obtuviste?**  
@@ -89,6 +90,7 @@ Se usa `socket.broadcast.emit` porque así el mensaje llega a todos menos al que
 De esa forma uno puede comprobar si todo está funcionando bien o si hay algún problema en la comunicación.
 
 ---
+
 
 
 
