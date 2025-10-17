@@ -334,7 +334,10 @@ function touchStarted() {
 
 ---
 
+
+
 # 5. **Código del mobile/INDEX.HTML**
+
 
 ´´´
 <!DOCTYPE html>
@@ -349,9 +352,12 @@ function touchStarted() {
 </head>
 <body></body>
 </html>
+
+
 ´´´
 
 ---
+
 
 
 
