@@ -358,6 +358,22 @@ function touchStarted() {
 
 ---
 
+# Autoevaluación de la Unidad 7
+
+**Justificación:** Cumplí con el 100% de las actividades, todo es funcional y todo es presentado a tiempo.
+
+### Verificación de Evidencia y Resultados
+
+| Actividad | Requisito Cumplido | Mi Resultado y Defensa |
+| :--- | :--- | :--- |
+| **1. Conexión Inicial** | Configurar y conectar ambos clientes. | **Dev Tunnels** me dio el acceso público. Los `console.log` del servidor mostraron la conexión del móvil y el desktop. Se comprobó la **funcionalidad en la red** sin usar la IP local. |
+| **2. Comunicación y Conectividad** | Enviar datos táctiles y evaluar el sistema. | La interacción fue **fluida**. Se usó `touchMoved()` en el móvil para enviar las coordenadas. Conceptualicé bien la diferencia entre Dev Tunnels (Internet) e IP local, lo que demuestra comprensión del por qué de la herramienta. |
+| **3. Análisis del Servidor** | Describir el flujo de datos. | Se demostró el entendimiento de **`socket.broadcast.emit`**: el celular envía el mensaje, y el servidor lo reenvía a *todos los demás* clientes conectados (solo el escritorio). Esto es clave para el control remoto en el server.js |
+| **4. Diagrama** | Representar la arquitectura. | Tengo listo el diagrama de la arquitectura, mostrando cómo el toque del celular (input) pasa por el servidor (procesador) y termina en la visualización del desktop (output). |
+| **5. Aplicación Final** | Integrar color (Hue) y sonido (Brightness). | El proyecto está terminado: **La posición X** del móvil controla el **Tono (Hue)** de la capa de color. El **volumen de la música** (`amp.getLevel()`) controla el **Brillo (Brightness)**, creando el efecto visual que palpita con el beat. La integración audio-visual-remoto está lograda y es funcional |
+
+## Nota Propuesta: **5.0** porque: El proyecto cumple con la interacción, comunicación y aplicación de conceptos de red y p5.js.
+
 
 
 
