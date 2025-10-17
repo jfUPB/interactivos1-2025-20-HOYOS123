@@ -93,7 +93,8 @@ De esa forma uno puede comprobar si todo está funcionando bien o si hay algún 
 
 ## ACTIVIDAD 04: Diagrama.
 
-<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/505571d9-67f5-4ca2-9582-6527fd57e7bc" />
+<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/5e7a9705-d4ff-4e4a-a3fa-9db27c013a9f" />
+
 
 ---
 
@@ -375,6 +376,7 @@ function touchStarted() {
 # Unidad 7 - Reflect:
 
 <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/be4f9d58-7ba9-4a07-a952-3f177f290e0d" />
+
 
 
 
