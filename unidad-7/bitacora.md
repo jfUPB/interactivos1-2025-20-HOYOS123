@@ -98,6 +98,7 @@ De esa forma uno puede comprobar si todo está funcionando bien o si hay algún 
 
 ## ACTIVIDAD 05: Apply
 
+
 1. **Código Server.js:**
 ´´´
 // server.js
@@ -132,6 +133,8 @@ server.listen(port, () => {
     console.log(`Mobile client: http://localhost:${port}/mobile/index.html`);
 });
 ´´´
+
+---
 
 2. **Código del desktop/sketch.js:**
 
@@ -244,6 +247,8 @@ function mouseClicked() {
 }
 ´´´
 
+---
+
 3. **Código del desktop/INDEX.HTML:**
 
 ´´´
@@ -277,6 +282,8 @@ function mouseClicked() {
 </body>
 </html>
 ´´´
+
+---
 
 4. **Código del mobile/sketch.js:**
 
@@ -325,6 +332,8 @@ function touchStarted() {
 }
 ´´´
 
+---
+
 5. **Código del mobile/INDEX.HTML**
 
 ´´´
@@ -341,6 +350,8 @@ function touchStarted() {
 <body></body>
 </html>
 ´´´
+
+---
 
 
 
