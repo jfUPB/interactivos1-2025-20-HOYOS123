@@ -374,6 +374,9 @@ function touchStarted() {
 
 # Unidad 7 - Reflect:
 
+<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/be4f9d58-7ba9-4a07-a952-3f177f290e0d" />
+
+
 
 
 
