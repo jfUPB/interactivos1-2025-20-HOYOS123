@@ -91,10 +91,256 @@ De esa forma uno puede comprobar si todo está funcionando bien o si hay algún 
 
 ---
 
+## ACTIVIDAD 04: Diagrama.
 
 
+---
 
+## ACTIVIDAD 05: Apply
 
+1. **Código Server.js:**
+´´´
+// server.js
+
+const express = require('express');
+const http = require('http');
+const socketIO = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const io = socketIO(server);
+const port = 3000;
+
+app.use(express.static('public'));
+
+io.on('connection', (socket) => {
+    console.log('New client connected');
+    
+    // Retransmite el mensaje
+    socket.on('message', (message) => {
+        socket.broadcast.emit('message', message);
+    });
+
+    socket.on('disconnect', () => {
+        console.log('Client disconnected');
+    });
+});
+
+server.listen(port, () => {
+    console.log(`Server is listening on http://localhost:${port}`);
+    console.log(`Desktop client: http://localhost:${port}/desktop/index.html`);
+    console.log(`Mobile client: http://localhost:${port}/mobile/index.html`);
+});
+´´´
+
+2. **Código del desktop/sketch.js:**
+
+´´´
+// public/desktop/sketch.js
+
+let socket;
+let currentX = 0; 
+let currentY = 0;
+let currentHue = 0; 
+let audioStarted = false; 
+
+const mobileWidth = 300; 
+const mobileHeight = 400; 
+let speakersBg; 
+
+// Variables de Audio
+let song;
+let amp; 
+
+// --- Precarga: Carga imagen y audio ---
+function preload() {
+    speakersBg = loadImage('../assets/speakers_background.png', 
+        () => console.log('Imagen de fondo cargada.'),
+        (err) => console.error('ERROR (Imagen): No se pudo cargar la imagen. Revisa la ruta y el nombre del archivo.', err)
+    );
+    
+    // Carga la canción
+    song = loadSound('../assets/pump_up_the_jam.mp3', 
+        () => console.log('Canción "Pump Up The Jam" cargada exitosamente.'),
+        (err) => console.error('ERROR (Audio): No se pudo cargar el audio. Revisa que p5.sound esté en index.html y la ruta sea correcta.', err)
+    );
+}
+
+function setup() {
+    createCanvas(800, 600); 
+    colorMode(HSB, 360, 100, 100, 255);
+    background(0); 
+    
+    amp = new p5.Amplitude();
+    if (song && song.isLoaded()) {
+        amp.setInput(song);
+    }
+
+    socket = io(); 
+    
+    socket.on('message', (data) => {
+        if (data && data.type === 'touch') {
+            currentX = data.x;
+            // EL TONO (currentHue) SOLO SE ACTUALIZA CON EL MOVIL
+            currentHue = map(currentX, 0, mobileWidth, 0, 360);
+            currentY = map(data.y, 0, mobileHeight, 0, height);
+        }
+    });    
+}
+
+function draw() {
+    let volume = 0;
+    if (audioStarted) {
+        volume = amp.getLevel();
+    }
+    
+    // 1. DIBUJAR LA IMAGEN DE FONDO
+    if (speakersBg) {
+        image(speakersBg, 0, 0, width, height); 
+    } else {
+        background(0); 
+    }
+    
+    // 2. APLICAR LA CAPA DE COLOR (Overlay)
+    if (audioStarted) {
+        // Mapeamos el volumen (0.0 a ~0.4) al brillo (desde un nivel bajo 60 hasta 100).
+        // El brillo (Brillo) ahora PALPITA al ritmo de la música.
+        let dynamicBrightness = map(volume, 0, 0.4, 60, 100, true);
+        
+        // Usamos HSB
+        colorMode(HSB, 360, 100, 100, 255);
+        
+        // Tono (Hue) = Móvil (currentHue)
+        // Brillo (Brightness) = Música (dynamicBrightness)
+        fill(currentHue, 70, dynamicBrightness, 80); 
+        noStroke();
+        rect(0, 0, width, height); 
+    } else {
+        // Si el audio no ha iniciado, muestra la instrucción
+        colorMode(RGB, 255);
+        fill(255, 255, 0); 
+        textSize(30);
+        textAlign(CENTER, CENTER);
+        text('CLICK PARA INICIAR MÚSICA Y CONTROL', width / 2, height / 2);
+    }
+    
+    // 3. Mostrar Información
+    colorMode(RGB, 255);
+    fill(255);
+    textSize(14);
+    textAlign(LEFT, TOP);
+    text(`Tono HSB (Móvil): ${currentHue.toFixed(0)}`, 10, 10);
+    text(`Brillo (Música): ${volume.toFixed(2)}`, 10, 30);
+    text(`Música: ${song && song.isLoaded() ? (audioStarted ? 'Reproduciendo' : 'Esperando Click') : 'Cargando...'}`, 10, 50);
+}
+
+// --- Iniciar Audio al Click del Usuario ---
+function mouseClicked() {
+    if (song && song.isLoaded() && !audioStarted) {
+        song.loop(); 
+        audioStarted = true;
+    }
+    return false;
+}
+´´´
+
+3. **Código del desktop/INDEX.HTML:**
+
+´´´
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lienzo Controlado por Móvil (Desktop)</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/addons/p5.sound.min.js"></script>
+    
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    
+    <script src="sketch.js"></script>
+    
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
+´´´
+
+4. **Código del mobile/sketch.js:**
+
+´´´
+// public/mobile/sketch.js
+
+let socket;
+const mobileWidth = 300;
+const mobileHeight = 400;
+
+function setup() {
+    createCanvas(mobileWidth, mobileHeight); 
+    socket = io();
+}
+
+function draw() {
+    background(50);
+    
+    // Muestra el estado de conexión
+    fill(socket && socket.connected ? 'green' : 'red');
+    ellipse(width - 20, 20, 10, 10);
+    
+    fill(255, 255, 0); 
+    textAlign(CENTER, CENTER);
+    textSize(18);
+    text('ARRASTRA PARA CAMBIAR COLOR', width / 2, height / 2 - 20);
+    textSize(12);
+    text('El escritorio recibirá las coordenadas X.', width / 2, height / 2 + 10);
+}
+
+// NUEVA LÓGICA: Envía la posición del arrastre
+function touchMoved() {
+    if (socket && socket.connected) {
+        let touchData = {
+            type: 'touch',
+            x: mouseX, 
+            y: mouseY  
+        };
+        socket.emit('message', touchData);
+    }
+    return false; // Bloquea el scroll
+}
+
+function touchStarted() {
+    return true; 
+}
+´´´
+
+5. **Código del mobile/INDEX.HTML**
+
+´´´
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.0/lib/p5.min.js"></script>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="sketch.js"></script>
+    <title>Mobile p5.js Application</title>
+</head>
+<body></body>
+</html>
+´´´
 
 
 
