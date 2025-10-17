@@ -377,6 +377,10 @@ function touchStarted() {
 
 <img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/be4f9d58-7ba9-4a07-a952-3f177f290e0d" />
 
+# Proyecto:
+
+[sfiSocketioDesktopMobile (2).zip](https://github.com/user-attachments/files/22978116/sfiSocketioDesktopMobile.2.zip)
+
 
 
 
