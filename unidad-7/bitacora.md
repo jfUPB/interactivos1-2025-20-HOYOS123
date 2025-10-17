@@ -99,7 +99,7 @@ De esa forma uno puede comprobar si todo está funcionando bien o si hay algún 
 ## ACTIVIDAD 05: Apply
 
 
-1. **Código Server.js:**
+# 1. **Código Server.js:**
 ´´´
 // server.js
 
@@ -136,7 +136,7 @@ server.listen(port, () => {
 
 ---
 
-2. **Código del desktop/sketch.js:**
+# 2. **Código del desktop/sketch.js:**
 
 ´´´
 // public/desktop/sketch.js
@@ -249,7 +249,7 @@ function mouseClicked() {
 
 ---
 
-3. **Código del desktop/INDEX.HTML:**
+# 3. **Código del desktop/INDEX.HTML:**
 
 ´´´
 <!DOCTYPE html>
@@ -285,7 +285,7 @@ function mouseClicked() {
 
 ---
 
-4. **Código del mobile/sketch.js:**
+# 4. **Código del mobile/sketch.js:**
 
 ´´´
 // public/mobile/sketch.js
@@ -334,7 +334,7 @@ function touchStarted() {
 
 ---
 
-5. **Código del mobile/INDEX.HTML**
+# 5. **Código del mobile/INDEX.HTML**
 
 ´´´
 <!DOCTYPE html>
@@ -352,6 +352,7 @@ function touchStarted() {
 ´´´
 
 ---
+
 
 
 
