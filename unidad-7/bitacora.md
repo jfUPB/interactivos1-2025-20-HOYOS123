@@ -335,11 +335,8 @@ function touchStarted() {
 ---
 
 
-
 # 5. **Código del mobile/INDEX.HTML**
 
-
-´´´
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -352,9 +349,6 @@ function touchStarted() {
 </head>
 <body></body>
 </html>
-
-
-´´´
 
 ---
 
@@ -373,6 +367,7 @@ function touchStarted() {
 | **5. Aplicación Final** | Integrar color (Hue) y sonido (Brightness). | El proyecto está terminado: **La posición X** del móvil controla el **Tono (Hue)** de la capa de color. El **volumen de la música** (`amp.getLevel()`) controla el **Brillo (Brightness)**, creando el efecto visual que palpita con el beat. La integración audio-visual-remoto está lograda y es funcional |
 
 ## Nota Propuesta: **5.0** porque: El proyecto cumple con la interacción, comunicación y aplicación de conceptos de red y p5.js.
+
 
 
 
