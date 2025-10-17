@@ -93,6 +93,7 @@ De esa forma uno puede comprobar si todo está funcionando bien o si hay algún 
 
 ## ACTIVIDAD 04: Diagrama.
 
+<img width="1024" height="768" alt="image" src="https://github.com/user-attachments/assets/505571d9-67f5-4ca2-9582-6527fd57e7bc" />
 
 ---
 
@@ -367,6 +368,12 @@ function touchStarted() {
 | **5. Aplicación Final** | Integrar color (Hue) y sonido (Brightness). | El proyecto está terminado: **La posición X** del móvil controla el **Tono (Hue)** de la capa de color. El **volumen de la música** (`amp.getLevel()`) controla el **Brillo (Brightness)**, creando el efecto visual que palpita con el beat. La integración audio-visual-remoto está lograda y es funcional |
 
 ## Nota Propuesta: **5.0** porque: El proyecto cumple con la interacción, comunicación y aplicación de conceptos de red y p5.js.
+
+
+---
+
+# Unidad 7 - Reflect:
+
 
 
 
