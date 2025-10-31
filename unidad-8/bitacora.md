@@ -52,10 +52,9 @@ Cada componente del sistema representa un tipo distinto de interacción:
 
 ---
 
-## 🔄 5. Diagrama de comunicación del sistema
+## 5. Diagrama de comunicación del sistema
 
-
-
+<img width="1024" height="768" alt="Gráfico diagrama de flujo sencillo versátil formas naranja y azul" src="https://github.com/user-attachments/assets/b2122816-a11c-4562-85fa-743836dd18e1" />
 
 - El **micro:bit** se comunica por **SerialPort (USB)** con el servidor Node.js.  
 - El **servidor Node.js** usa **Socket.IO** para conectar en tiempo real el **móvil** y el **desktop**.  
@@ -303,5 +302,6 @@ while True:
         print("B")
         sleep(200)
 ```
+
 
 
