@@ -307,13 +307,14 @@ while True:
 
 # Video de evidencia:
 
-![Video de muestra](https://youtube.com/shorts/xAQY0D_2X-8?feature=share)
+[Ver video del funcionamiento aquí](https://youtube.com/shorts/mRucOeF76zI?feature=share)
 
 ---
 
 # **AUTOVALUACIÓN**
 
 **R//** Creo que me merezco un 5 porque hice todas las partes del trabajo completas y funcionales. Logré que el micro:bit, el celular y el escritorio se comunicaran entre sí correctamente, y las visuales responden en tiempo real. Además, documenté todo el proceso, incluyendo los referentes, el concepto, los bocetos y el diagrama del sistema. El proyecto funciona bien, está probado y cumple con todo lo que pedía la rúbrica.
+
 
 
 
